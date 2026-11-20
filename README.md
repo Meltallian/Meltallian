@@ -12,6 +12,10 @@ It fetches manuscript transcriptions from a DTS (Distributed Text Services) endp
 
 `Python` `FastAPI` `SQLModel` `Alembic` `CLTK` `Stanza` `httpx` `pytest` `Docker` `Podman / Quadlet` `Rocky Linux`
 
+### Currently building: [unplug](https://github.com/Meltallian/unplug)
+
+A side project, in progress: a web app that turns a YouTube song into a guitar chord sheet. So far it has a FastAPI app, a Celery and Redis job queue, PostgreSQL, and a download stage built on yt-dlp, all running with Docker Compose. Chord detection is next.
+
 ### Other work
 
 - **Order-management web app (freelance, private)**: a Django app for a small business. It manages clients and orders, migrated 1,500 Excel records to SQLite, and generates courier-ready PDFs in one click. Deployed with Docker; I still maintain it.
