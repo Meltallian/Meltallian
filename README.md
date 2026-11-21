@@ -14,7 +14,14 @@ It fetches manuscript transcriptions from a DTS (Distributed Text Services) endp
 
 ### Currently building: [unplug](https://github.com/Meltallian/unplug)
 
-A side project, in progress: a web app that turns a YouTube song into a guitar chord sheet. So far it has a FastAPI app, a Celery and Redis job queue, PostgreSQL, and a download stage built on yt-dlp, all running with Docker Compose. Chord detection is next.
+A side project, in progress, built with a friend: paste a YouTube link and get a guitar chord sheet you can play from.
+
+- **Chords** from a transformer model (BTC) decoded onto the song's bars: 0.87 major/minor accuracy on the McGill Billboard benchmark, up from 0.63 for the first version.
+- **Tempo, time signature and bars**, including songs that switch between 6/8 and 4/4.
+- **Lyrics with word-level timing** with Whisper, so each chord sits over the word where it changes.
+- **Engraved sheet music** (MEI → Verovio → SVG), a chord editor, capo and transposition, PDF export.
+
+`Python` `FastAPI` `Celery` `Redis` `PostgreSQL` `PyTorch` `Whisper` `Docker Compose`
 
 ### Other work
 
