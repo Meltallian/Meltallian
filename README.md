@@ -1,37 +1,50 @@
 ## Jérémie Bidaux
 
-Backend & AI engineer in Lausanne, Switzerland. I build Python services that turn slow, manual workflows into one-click pipelines.
+**Backend & Research Software Engineer** based near Lausanne, Switzerland (Renens).  
+I build Python and Java backend services, scientific data pipelines, and containerized Linux deployments.
 
-Background: biology (MSc, University of Lausanne), then 42 School Lausanne. Since then: Java at Groupe Mutuel, Python and DevOps at the University of Lausanne.
+Background: MSc in Biology (University of Lausanne) and software engineering at **42 Lausanne** (C/C++, Unix systems). Professionally: enterprise Java at **Groupe Mutuel**, then Python backend & Linux DevOps at the **University of Lausanne**.
+
+[LinkedIn](https://linkedin.com/in/YOUR_HANDLE) · [Email](mailto:jeremie.bidaux@gmail.com)
+
+---
 
 ### Featured: [σ-Bridge](https://github.com/unilenlac/s-bridge)
 
-A FastAPI service I designed and built for the University of Lausanne's ENLAC research project on ancient manuscripts (about 200 commits).
+A production FastAPI service I architected and deployed for the University of Lausanne's ENLAC research project on ancient manuscripts (~200 commits).
 
-It fetches manuscript transcriptions from a DTS (Distributed Text Services) endpoint, parses the TEI-XML, tokenizes and lemmatizes Ancient Greek with **CLTK / Stanza**, aligns the manuscript variants with **CollateX**, and imports the result into the **Stemmarest** server. It replaced the local files and many manual steps of a workflow that ran from 2018 to 2025 with a single pipeline.
+- Fetches manuscript transcriptions from a **DTS** (Distributed Text Services) endpoint, parses TEI-XML, tokenizes and lemmatizes Ancient Greek with **CLTK / Stanza** *(+ Ollama, if applicable here)*, aligns textual variants with **CollateX**, and imports results into **Stemmarest**.
+- Replaced a 7-year local-file workflow (2018–2025) with a centralized, server-hosted REST API and single-click pipeline.
+- Deployed on **Rocky Linux** using rootless **Podman**, **Quadlet**, and **systemd** for declarative restarts and crash recovery.
 
-`Python` `FastAPI` `SQLModel` `Alembic` `CLTK` `Stanza` `httpx` `pytest` `Docker` `Podman / Quadlet` `Rocky Linux`
+`Python` `FastAPI` `Pydantic` `SQLModel` `Alembic` `Stanza` `httpx` `pytest` `Podman / Quadlet` `systemd` `Rocky Linux`
+
+---
 
 ### Currently building: [unplug](https://github.com/Meltallian/unplug)
 
-A side project, in progress, built with a friend: paste a YouTube link and get a guitar chord sheet you can play from.
+An active side project built with a friend *(adjust: e.g., owning the Python/FastAPI backend, async pipeline, and deployment)*: paste a YouTube link and get a playable guitar chord sheet.
 
-- **Chords** from a transformer model (BTC) decoded onto the song's bars: 0.87 major/minor accuracy on the McGill Billboard benchmark, up from 0.63 for the first version.
-- **Tempo, time signature and bars**, including songs that switch between 6/8 and 4/4.
-- **Lyrics with word-level timing** with Whisper, so each chord sits over the word where it changes.
-- **Engraved sheet music** (MEI → Verovio → SVG), a chord editor, capo and transposition, PDF export.
+- **Chord recognition:** Transformer model (BTC) decoded onto song bars — **0.87** major/minor accuracy on the McGill Billboard benchmark (up from 0.63 in v1).
+- **Rhythm & structure:** Tempo, time signature, and bar tracking, including mid-song meter changes (6/8 ↔ 4/4).
+- **Word-level alignment:** Lyrics aligned via **Whisper** so chord changes sit directly over the right syllable.
+- **Engraved output:** MEI → Verovio → SVG rendering, interactive chord editor, capo/transposition, and PDF export.
 
 `Python` `FastAPI` `Celery` `Redis` `PostgreSQL` `PyTorch` `Whisper` `Docker Compose`
 
+---
+
 ### Other work
 
-- **Order-management web app (freelance, private)**: a Django app for a small business. It manages clients and orders, migrated 1,500 Excel records to SQLite, and generates courier-ready PDFs in one click. Deployed with Docker; I still maintain it.
-- **[inception](https://github.com/Meltallian/inception)**: an NGINX + WordPress + MariaDB stack built from scratch with Docker Compose.
-- **42 School**: C and C++ systems projects, including a Unix shell, an HTTP/1.1 server, [push_swap](https://github.com/Meltallian/push_swap), [philosophers](https://github.com/Meltallian/philosophers) and [C++ modules](https://github.com/Meltallian/CPP).
+- **Order-management web app (Freelance, private):** Production **Django / Python** platform for a small business. Migrated 1,500+ legacy Excel records to a normalized **SQLite** database and automated courier-ready PDF generation. Deployed via **Docker** on a private Linux server (Synology); actively maintained.
+- **[inception](https://github.com/Meltallian/inception):** NGINX + WordPress + MariaDB stack built from scratch with Docker Compose.
+- **42 Lausanne:** Systems programming in C/C++, including a Unix shell (**Minishell**), an RFC 7230 HTTP/1.1 server (**Webserv**), a full-stack web app (**Transcendance**), plus [push_swap](https://github.com/Meltallian/push_swap), [philosophers](https://github.com/Meltallian/philosophers), and [C++ modules](https://github.com/Meltallian/CPP).
+
+---
 
 ### Stack
 
-**Languages:** Python, Java, C, C++, SQL, JavaScript, Bash, R
-**Backend:** FastAPI, Django, Spring Boot, Pydantic, SQLModel
-**NLP / AI:** CLTK, Stanza, Ollama
-**Infrastructure:** Docker, Podman, Linux, Jenkins, SonarQube, Git
+- **Languages:** Python, Java, C, C++, SQL (PostgreSQL, SQLite), JavaScript, Bash, R
+- **Backend & Data:** FastAPI, Django, Pydantic, SQLModel, Alembic, Celery, Redis, REST APIs, pytest
+- **NLP & ML Tooling:** Stanza, CLTK, Ollama, PyTorch, Whisper
+- **Infrastructure & Quality:** Linux (Rocky), Docker, Podman / Quadlet, systemd, Jenkins, SonarQube, Maven, Git
