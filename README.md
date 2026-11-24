@@ -13,7 +13,7 @@ Background: MSc in Biology (University of Lausanne) and software engineering at 
 
 A production FastAPI service I architected and deployed for the University of Lausanne's ENLAC research project on ancient manuscripts (~200 commits).
 
-- Fetches manuscript transcriptions from a **DTS** (Distributed Text Services) endpoint, parses TEI-XML, tokenizes and lemmatizes Ancient Greek with **CLTK / Stanza** *(+ Ollama, if applicable here)*, aligns textual variants with **CollateX**, and imports results into **Stemmarest**.
+- Fetches manuscript transcriptions from a **DTS** (Distributed Text Services) endpoint, parses TEI-XML, tokenizes and lemmatizes Ancient Greek with **CLTK / Stanza** / *Ollama*, aligns textual variants with **CollateX**, and imports results into **Stemmarest**.
 - Replaced a 7-year local-file workflow (2018–2025) with a centralized, server-hosted REST API and single-click pipeline.
 - Deployed on **Rocky Linux** using rootless **Podman**, **Quadlet**, and **systemd** for declarative restarts and crash recovery.
 
@@ -25,7 +25,7 @@ A production FastAPI service I architected and deployed for the University of La
 
 An active side project built with a friend *(adjust: e.g., owning the Python/FastAPI backend, async pipeline, and deployment)*: paste a YouTube link and get a playable guitar chord sheet.
 
-- **Chord recognition:** Transformer model (BTC) decoded onto song bars — **0.87** major/minor accuracy on the McGill Billboard benchmark (up from 0.63 in v1).
+- **Chord recognition:** Transformer model (BTC) decoded onto song bars.
 - **Rhythm & structure:** Tempo, time signature, and bar tracking, including mid-song meter changes (6/8 ↔ 4/4).
 - **Word-level alignment:** Lyrics aligned via **Whisper** so chord changes sit directly over the right syllable.
 - **Engraved output:** MEI → Verovio → SVG rendering, interactive chord editor, capo/transposition, and PDF export.
